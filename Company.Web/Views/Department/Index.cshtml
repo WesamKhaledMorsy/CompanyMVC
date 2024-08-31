@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Department>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(d => d.Code)</th>
+                <th>@Html.DisplayNameFor(d => d.Name)</th>
+                <th>@Html.DisplayNameFor(d => d.CreatedAt)</th>
+                <th>@Html.DisplayNameFor(d => d.UpdatedAt)</th>
+                <th>Details</th>
+                <th>Update </th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var depart in Model)
+            {
+                <tr>
+                    <th>@depart.Code</th>
+                    <td>@depart.Name</td>
+                    <td>@depart.CreatedAt</td>
+                    <td>@depart.UpdatedAt</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info">
+                            <a asp-action="Details" asp-route-id="@depart.Id">
+
+                                <i class="fa-solid fa-file-lines"></i>
+                            </a> 
+                    </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success">
+                            <a asp-action="Update" asp-route-id="@depart.Id">
+                                <i class="fa-solid fa-edit"></i>
+                            </a>
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger">
+                            <a asp-action="Delete" asp-route-id="@depart.Id">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                            </a>
+                        </button>
+                    </td>
+                </tr>                      
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>
+        <center>
+            <p>There is No Departments</p>
+        </center>
+    </div>
+}

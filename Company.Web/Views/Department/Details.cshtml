@@ -1,0 +1,56 @@
+﻿@model  Department
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Department Details</h1>
+@if(Model != null)
+{
+    <div class="card my-3">
+        <h5 class="card-header">@Model.Name</h5>
+        <div class="card-body">
+            <h5 class="card-title"> <span class="text-danger">Name:</span>  @Model.Name</h5>
+            <p class="card-text"> <span class="text-danger">Code : </span>Code : @Model.Code</p>
+            <p class="card-text"><span class="text-danger">Created At :</span>@Model.CreatedAt</p>
+            <p class="card-text"><span class="text-danger">Updated At :</span> @Model.UpdatedAt</p>
+            <h5 class="card-title"> <span class="text-dark">Employes:</span>  </h5>
+            @if(Model.Employees.Count() > 0)
+            {
+                @for (int i = 0; i < Model.Employees.Count(); i++)
+                {
+                   
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                 </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var emp in Model.Employees)
+                            {
+                                <tr>
+                                    <td>@emp.Id</td>
+                                    <td>@emp.Name</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+
+                    
+                }                
+            }else{
+                <div class="alert alert-warning" role="alert">
+                    NO Employees for @Model.Name Department
+                </div>
+            }
+
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+       Department not Exist
+    </div>
+}
