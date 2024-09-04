@@ -10,6 +10,7 @@ namespace Company.Repository.Interfaces
 {
     public interface IDepartmentRepository:IGenericRepo<Department>
     {
-        Department GetDepartmentWithEmployees(int id);
+        Department GetDepartmentWithEmployees(int ?id);
+        Department GetDepartmentWithEmployeesAsNoTracking(int? id);
     }
 }

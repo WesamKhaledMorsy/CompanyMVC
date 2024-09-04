@@ -6,11 +6,16 @@
 <h1>Department Details</h1>
 @if(Model != null)
 {
+    <form asp-controller="Department" asp-action="Update">
+        
+   
     <div class="card my-3">
         <h5 class="card-header">@Model.Name</h5>
         <div class="card-body">
-            <h5 class="card-title"> <span class="text-danger">Name:</span>  @Model.Name</h5>
-            <p class="card-text"> <span class="text-danger">Code : </span>Code : @Model.Code</p>
+            <h5 class="card-title"> <span class="text-danger">Name:</span> </h5>
+            <input asp-for="@Model.Name" type="text" class="form-control" readonly />
+            <label class="card-text"> <span class="text-danger">Code : </span> </label>
+            <input asp-for="@Model.Code" type="text" class="form-control" readonly/>
             <p class="card-text"><span class="text-danger">Created At :</span>@Model.CreatedAt</p>
             <p class="card-text"><span class="text-danger">Updated At :</span> @Model.UpdatedAt</p>
             <h5 class="card-title"> <span class="text-dark">Employes:</span>  </h5>
@@ -47,6 +52,8 @@
 
         </div>
     </div>
+        <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-outline-success">Go to Update </a>
+    </form>
 }
 else
 {

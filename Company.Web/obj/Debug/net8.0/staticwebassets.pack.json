@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\images\\notfound.jpeg",
+      "PackagePath": "staticwebassets\\images\\notfound.jpeg"
+    },
+    {
+      "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\images\\notfound1.jpg",
+      "PackagePath": "staticwebassets\\images\\notfound1.jpg"
+    },
+    {
       "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\js\\all.min.js",
       "PackagePath": "staticwebassets\\js\\all.min.js"
     },

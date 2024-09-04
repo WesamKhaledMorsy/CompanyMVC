@@ -20,9 +20,14 @@ namespace Company.Repository.Repositories
         {
             _dbContext = dbContext;
         }
-        public Department GetDepartmentWithEmployees(int id)
+        public Department GetDepartmentWithEmployees(int? id)
         {
             var dept = _dbContext.Departments.Where(x=>x.Id == id).Include(x=>x.Employees).FirstOrDefault();
+            return dept;
+        }
+        public Department GetDepartmentWithEmployeesAsNoTracking(int? id)
+        {
+            var dept = _dbContext.Departments.Where(x => x.Id == id).Include(x => x.Employees).AsNoTracking().FirstOrDefault();
             return dept;
         }
 

@@ -258,3 +258,4 @@ D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\libman.json
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\obj\Debug\net8.0\Company.Web.sourcelink.json

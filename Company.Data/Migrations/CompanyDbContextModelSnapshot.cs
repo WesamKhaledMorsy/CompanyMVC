@@ -52,7 +52,7 @@ namespace Company.Data.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("Company.Data.Entities.Employee", b =>
@@ -109,7 +109,7 @@ namespace Company.Data.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("Company.Data.Entities.Employee", b =>
