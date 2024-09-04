@@ -11,8 +11,8 @@ namespace Company.Repository.Interfaces.IGenericRepository
     {
         T GetByID(int id);
         T GetByIDAsNoTracking(int id);
-        IQueryable<T> GetAllAsNoTracking();
-        IQueryable<T> GetAll();
+        IEnumerable<T> GetAllAsNoTracking();
+        IEnumerable<T> GetAll();
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);

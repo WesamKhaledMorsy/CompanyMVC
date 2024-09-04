@@ -89,7 +89,7 @@ namespace Company.Web.Controllers
                 if (id != departmentModel.Id)
                     return RedirectToAction("NotFoundPage", "Home");
                 if (ModelState.IsValid)
-                {
+                {                    
                     _departmentService.Update(departmentModel);
                     return RedirectToAction(nameof(Index));
                 }

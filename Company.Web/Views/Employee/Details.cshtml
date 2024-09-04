@@ -1,7 +1,49 @@
 ﻿
+@model Employee
 @{
     ViewData["Title"] = "Details";
+    List<Department> Departments = new List<Department>();
 }
 
-<h1>Details</h1>
+<h1>Employee Details</h1>
+@if (Model != null)
+{
+    <form asp-controller="Employee" asp-action="Update">
 
+
+        <div class="card my-3">
+            <h5 class="card-header">@Model.Name</h5>
+            <div class="card-body">
+                <h5 class="card-title"> <span class="text-danger">Name:</span> </h5>
+                <input asp-for="@Model.Name" type="text" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Age : </span> </label>
+                <input asp-for="@Model.Age" type="text" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Address : </span> </label>
+                <input asp-for="@Model.Address" type="text" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Email : </span> </label>
+                <input asp-for="@Model.Email" type="email" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Phone Number : </span> </label>
+                <input asp-for="@Model.PhoneNumber" type="text" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Salary : </span> </label>
+                <input asp-for="@Model.Salary" type="text" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Hiring Date : </span> </label>
+                <input asp-for="@Model.HiringDate" type="text" class="form-control" readonly />
+                <label class="card-text"> <span class="text-danger">Department Name : </span> </label>
+                <input asp-for="@Model.DepartmentId" type="text" class="form-control" readonly />
+
+                <p class="card-text"><span class="text-danger">Created At :</span>@Model.CreatedAt</p>
+                <p class="card-text"><span class="text-danger">Updated At :</span> @Model.UpdatedAt</p>
+                @* <h5 class="card-title"> <span class="text-dark">Department:</span> @Model.Department.Name </h5> *@
+              
+
+            </div>
+        </div>
+        <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-outline-success">Go to Update </a>
+    </form>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+        Department not Exist
+    </div>
+}

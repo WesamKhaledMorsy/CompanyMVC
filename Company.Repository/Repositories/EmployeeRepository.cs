@@ -23,5 +23,9 @@ namespace Company.Repository.Repositories
 
         public IEnumerable<Employee> GetEmployeesByAddress(string address)
             => _dbContext.Employees.Where(x=> x.Address == address).ToList();
+
+        public IEnumerable<Department> GetDepartments()
+            => _dbContext.Departments.ToList();
+
     }
 }

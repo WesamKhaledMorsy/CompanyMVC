@@ -12,5 +12,6 @@ namespace Company.Repository.Interfaces
     {
         Employee GetEmployeeByName(string name);
         IEnumerable<Employee> GetEmployeesByAddress(string address);
+        IEnumerable<Department> GetDepartments();
     }
 }

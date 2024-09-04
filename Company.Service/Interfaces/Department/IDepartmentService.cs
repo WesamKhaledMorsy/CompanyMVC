@@ -12,7 +12,7 @@ namespace Company.Service.Interfaces
     {
         Department GetByID(int? id);
         Department GetByIDAsNoTracking(int? id);
-        IQueryable<Department> GetAll();
+        IEnumerable<Department> GetAll();
         void Add(Department entity);
         void Update(Department entity);
         void Delete(Department entity);

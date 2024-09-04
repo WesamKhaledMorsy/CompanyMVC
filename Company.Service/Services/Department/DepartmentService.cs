@@ -43,7 +43,7 @@ namespace Company.Service.Services
             _unitOfWork.Complete();
         }
 
-        public IQueryable<Department> GetAll()
+        public IEnumerable<Department> GetAll()
         {
             var departments= _unitOfWork.DepartmentRepository.GetAll();
             return departments;
@@ -55,6 +55,8 @@ namespace Company.Service.Services
                 //throw new Exception("Id IS Null");
                 return null;
             var depertment = _unitOfWork.DepartmentRepository.GetByID(id.Value);
+            var employees = _unitOfWork.EmployeeRepository.GetAll().Where(x => x.DepartmentId == id.Value).ToList();
+            depertment.Employees =employees;
             if (depertment is null)
                 return null;
             return depertment;
@@ -65,6 +67,8 @@ namespace Company.Service.Services
                 //throw new Exception("Id IS Null");
                 return null;
             var depertment = _unitOfWork.DepartmentRepository.GetByIDAsNoTracking(id.Value);
+            var employees = _unitOfWork.EmployeeRepository.GetAll().Where(x=>x.DepartmentId == id.Value).ToList();
+            depertment.Employees =employees;
             if (depertment is null)
                 return null;
             return depertment;
@@ -89,6 +93,7 @@ namespace Company.Service.Services
                 //}
                 oldDept.Name= entity.Name;
                 oldDept.Code= entity.Code;
+            oldDept.Employees = entity.Employees;
                 _unitOfWork.DepartmentRepository.Update(oldDept);
                 _unitOfWork.Complete();
             

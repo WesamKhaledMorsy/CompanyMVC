@@ -24,9 +24,9 @@ namespace Company.Repository.Repositories.GenericRepository
         public void Delete(T entity)
             =>_dbContext.Set<T>().Remove(entity);
 
-        public IQueryable<T> GetAll()
+        public IEnumerable<T> GetAll()
             => _dbContext.Set<T>().AsQueryable();
-        public IQueryable<T> GetAllAsNoTracking()
+        public IEnumerable<T> GetAllAsNoTracking()
          => _dbContext.Set<T>().AsNoTracking().AsQueryable();
 
         public T GetByID(int id)

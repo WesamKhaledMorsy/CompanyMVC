@@ -13,3 +13,4 @@ D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Repository\obj\Debu
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Repository\obj\Debug\net8.0\refint\Company.Repository.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Repository\obj\Debug\net8.0\Company.Repository.pdb
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Repository\obj\Debug\net8.0\ref\Company.Repository.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Repository\obj\Debug\net8.0\Company.Repository.sourcelink.json
