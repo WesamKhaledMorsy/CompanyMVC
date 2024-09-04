@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.BuildWithSkipAnalyzers
+/Company.Repository/obj/Debug/net8.0/Company.Repository.AssemblyInfoInputs.cache
+/Company.Repository/obj/Debug/net8.0/Company.Repository.csproj.AssemblyReference.cache
+*.cache
+*.vsidx
+/Company.Web/.vs/Company.Web/v17/.futdcache.v2
+/Company.Web/.vs/Company.Web/v17/.suo
+/Company.Web/.vs/Company.Web/v17/DocumentLayout.json
+/Company.Web/obj/Debug/net8.0/Company.Web.csproj.AssemblyReference.cache
+/Company.Web/obj/Debug/net8.0/Company.Web.AssemblyInfoInputs.cache
