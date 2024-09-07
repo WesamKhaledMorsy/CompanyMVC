@@ -1,3 +1,9 @@
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.csproj.AssemblyReference.cache
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.AssemblyInfoInputs.cache
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.AssemblyInfo.cs
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.csproj.CoreCompileInputs.cache
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.sourcelink.json
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\net8.0\Company.Service.deps.json
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\net8.0\Company.Service.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\net8.0\Company.Service.pdb
@@ -5,14 +11,8 @@ D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\n
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\net8.0\Company.Repository.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\net8.0\Company.Repository.pdb
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\bin\Debug\net8.0\Company.Data.pdb
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.csproj.AssemblyReference.cache
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.GeneratedMSBuildEditorConfig.editorconfig
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.AssemblyInfoInputs.cache
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.AssemblyInfo.cs
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.csproj.CoreCompileInputs.cache
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company..9E0F764A.Up2Date
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\refint\Company.Service.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.pdb
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\ref\Company.Service.dll
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Service\obj\Debug\net8.0\Company.Service.sourcelink.json

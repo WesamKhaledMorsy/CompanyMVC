@@ -18,8 +18,11 @@ namespace Company.Repository.Repositories
             _dbContext = dbContext;
         }
 
-        public Employee GetEmployeeByName(string name)
-            => _dbContext.Employees.FirstOrDefault(x => x.Name == name);
+        public IEnumerable<Employee> GetEmployeeByName(string name)
+            => _dbContext.Employees.Where(x => x.Name.Trim().ToLower().Contains(name.Trim().ToLower())
+            ||  x.Email.Trim().ToLower().Contains(name.Trim().ToLower())
+            ||  x.Address.Trim().ToLower().Contains(name.Trim().ToLower())
+            ).ToList();
 
         public IEnumerable<Employee> GetEmployeesByAddress(string address)
             => _dbContext.Employees.Where(x=> x.Address == address).ToList();

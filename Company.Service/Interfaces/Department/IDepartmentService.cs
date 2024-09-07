@@ -1,5 +1,6 @@
 ﻿using Company.Data.Contexts.Configurations;
 using Company.Data.Entities;
+using Company.Service.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace Company.Service.Interfaces
 {
-    public interface IDepartmentService
+    public interface IDepartmentDtoService
     {
-        Department GetByID(int? id);
-        Department GetByIDAsNoTracking(int? id);
-        IEnumerable<Department> GetAll();
-        void Add(Department entity);
-        void Update(Department entity);
-        void Delete(Department entity);
-        Department GetDepartmentWithEmployees(int? id);
-        Department GetDepartmentWithEmployeesAsNoTracking(int? id);
+        DepartmentDto GetByID(int? id);
+        DepartmentDto GetByIDAsNoTracking(int? id);
+        IEnumerable<DepartmentDto> GetAll();
+        void Add(DepartmentDto entity);
+        void Update(DepartmentDto entity);
+        void Delete(DepartmentDto entity);
+        DepartmentDto GetDepartmentDtoWithEmployees(int? id);
+        DepartmentDto GetDepartmentDtoWithEmployeesAsNoTracking(int? id);
     }
 }

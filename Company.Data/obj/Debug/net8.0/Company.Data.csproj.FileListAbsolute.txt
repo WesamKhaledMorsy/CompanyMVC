@@ -6,8 +6,8 @@ D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.AssemblyInfoInputs.cache
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.AssemblyInfo.cs
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.csproj.CoreCompileInputs.cache
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.sourcelink.json
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\refint\Company.Data.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.pdb
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\ref\Company.Data.dll
-D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Data\obj\Debug\net8.0\Company.Data.sourcelink.json

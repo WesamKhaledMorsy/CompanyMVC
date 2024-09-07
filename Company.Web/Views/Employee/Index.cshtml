@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Employee>
+﻿@model IEnumerable<EmployeeDto>
 @{
     ViewData["Title"] = "Index";
 }
@@ -12,17 +12,29 @@
     </button>
 </div>
 <br />
+<div class="row justify-content-center algin-items-center mt- ">
+    <form class="row col-8 offset-2" asp-action="Index">
+        <div class=" col-8">
+            <input type="text" class="form-control" name="searchInput" placeholder="Search by Name ....." />
+        </div>
+        <div class="col-4">
+            <input type="submit" value="Search" class="btn btn-success" />
+        </div>
+    </form>
+</div>
 @if (Model.Count() > 0 )
 {
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>@Html.DisplayNameFor(d => d.Id)</th>
+                <th>@Html.DisplayNameFor(d => d.Image)</th>
                 <th>@Html.DisplayNameFor(d => d.Name)</th>
                 <th>@Html.DisplayNameFor(d => d.Address)</th>
                 <th>@Html.DisplayNameFor(d => d.Age)</th>
                 <th>@Html.DisplayNameFor(d => d.Email)</th>
-                <th>@Html.DisplayNameFor(d => d.Department.Name)</th>
+                @* <th>@Html.DisplayNameFor(d => d.Department.Name)</th> *@
+                <th>Department Name</th>
                 <th>@Html.DisplayNameFor(d => d.CreatedAt)</th>
                 <th>@Html.DisplayNameFor(d => d.UpdatedAt)</th>
                 <th>Details</th>
@@ -34,36 +46,18 @@
             @foreach (var employee in Model)
             {
                 <tr>
-                    <th>@employee.Id</th>
+                    <td>@employee.Id</td>
+                    <td>
+                       <img src="~/Files/Images/@employee.ImageUrl" height="40" width="40" alt="EmployeeImage" />
+                    </td>
                     <td>@employee.Name</td>
                     <td>@employee.Address</td>
                     <td>@employee.Age</td>
                     <td>@employee.Email</td>
-                    <td>@employee.Department?.Name</td>
+                    <td>@employee.Department?.Name ||  @employee.DepartmentId</td>
                     <td>@employee.CreatedAt</td>
                     <td>@employee.UpdatedAt</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-info">
-                            <a asp-action="Details" asp-route-id="@employee.Id">
-                                <i class="fa-solid fa-file-lines"></i> 
-                            </a>
-                        </button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-outline-success">
-                            <a asp-action="Update" asp-route-id="@employee.Id">
-                                <i class="fa-solid fa-edit"></i>
-                            </a>
-                           
-                        </button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-outline-danger">
-                            <a asp-action="Delete" asp-route-id="@employee.Id">
-                                <i class="fa-solid fa-circle-xmark"></i>
-                            </a>                         
-                        </button>
-                    </td>
+                    <partial name="_ActionButtonPartialView" model="@employee.Id.ToString()"></partial>
                 </tr>
             }
         </tbody>

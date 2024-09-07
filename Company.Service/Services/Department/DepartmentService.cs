@@ -1,7 +1,9 @@
-﻿using Company.Data.Entities;
+﻿using AutoMapper;
+using Company.Data.Entities;
 using Company.Repository.Interfaces;
 using Company.Repository.Interfaces.UnitOfWork;
 using Company.Service.Interfaces;
+using Company.Service.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,70 +13,71 @@ using System.Threading.Tasks;
 
 namespace Company.Service.Services
 {
-    public class DepartmentService : IDepartmentService
+    public class DepartmentService : IDepartmentDtoService
     {
         private readonly IUnitOfWork _unitOfWork;
-        public DepartmentService( IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        public DepartmentService( IUnitOfWork unitOfWork,IMapper mapper)
         {       
             _unitOfWork=unitOfWork;
+            _mapper=mapper;
         }
 
 
-        public void Add(Department entity)
+        public void Add(DepartmentDto entity)
         {
             //Mapping
-            var mappedDepartemnt = new Department 
-            {
-                Code =  entity.Code ,
-                Name = entity.Name ,
-                Employees = entity.Employees ,
-                CreatedAt = DateTime.Now 
-            };
+            Department mappedDepartemnt = _mapper.Map<Department>(entity);
             _unitOfWork.DepartmentRepository.Add(mappedDepartemnt);
             _unitOfWork.Complete();
 
         }
 
-        public void Delete(Department entity)
+        public void Delete(DepartmentDto entity)
         {
             if (entity.Employees.Count()>0)
                 throw new Exception("You can not delete the department tht has Employees in it");
-            _unitOfWork.DepartmentRepository.Delete(entity);
+            Department mappedDepartemnt = _mapper.Map<Department>(entity);
+            _unitOfWork.DepartmentRepository.Delete(mappedDepartemnt);
             _unitOfWork.Complete();
         }
 
-        public IEnumerable<Department> GetAll()
+        public IEnumerable<DepartmentDto> GetAll()
         {
             var departments= _unitOfWork.DepartmentRepository.GetAll();
-            return departments;
+            IEnumerable<DepartmentDto> mappedDepartemnts = _mapper.Map<IEnumerable<DepartmentDto>>(departments);
+            return mappedDepartemnts;
         }
 
-        public Department GetByID(int? id)
+        public DepartmentDto GetByID(int? id)
         {
             if(id is null)
                 //throw new Exception("Id IS Null");
                 return null;
-            var depertment = _unitOfWork.DepartmentRepository.GetByID(id.Value);
+            var department = _unitOfWork.DepartmentRepository.GetByID(id.Value);
             var employees = _unitOfWork.EmployeeRepository.GetAll().Where(x => x.DepartmentId == id.Value).ToList();
-            depertment.Employees =employees;
-            if (depertment is null)
+            department.Employees =employees;
+            if (department is null)
                 return null;
-            return depertment;
+         
+            var departmentDto = _mapper.Map<DepartmentDto>(department);
+            return departmentDto;
         }
-        public Department GetByIDAsNoTracking(int? id)
+        public DepartmentDto GetByIDAsNoTracking(int? id)
         {
             if (id is null)
                 //throw new Exception("Id IS Null");
                 return null;
-            var depertment = _unitOfWork.DepartmentRepository.GetByIDAsNoTracking(id.Value);
+            var department = _unitOfWork.DepartmentRepository.GetByIDAsNoTracking(id.Value);
             var employees = _unitOfWork.EmployeeRepository.GetAll().Where(x=>x.DepartmentId == id.Value).ToList();
-            depertment.Employees =employees;
-            if (depertment is null)
+            department.Employees =employees;
+            if (department is null)
                 return null;
-            return depertment;
+            var departmentDto = _mapper.Map<DepartmentDto>(department);
+            return departmentDto;
         }
 
-        public void Update(Department entity)
+        public void Update(DepartmentDto entity)
         {
             //if (entity is null)
             //    return ;
@@ -85,7 +88,7 @@ namespace Company.Service.Services
             //_departmentRepository.Update(entity);
 
             ///OR 
-            var oldDept = GetByID(entity.Id);
+            var oldDept = GetByIDAsNoTracking(entity.Id);
           
                 //if(GetAll().Any(x=>x.Name == entity.Name))
                 //{
@@ -94,29 +97,33 @@ namespace Company.Service.Services
                 oldDept.Name= entity.Name;
                 oldDept.Code= entity.Code;
             oldDept.Employees = entity.Employees;
-                _unitOfWork.DepartmentRepository.Update(oldDept);
+            
+            Department department = _mapper.Map<Department>(oldDept);
+            _unitOfWork.DepartmentRepository.Update(department);
                 _unitOfWork.Complete();
             
         }
-        public Department GetDepartmentWithEmployees(int? id)
+        public DepartmentDto GetDepartmentDtoWithEmployees(int? id)
         {
             if (id is null)
                 //throw new Exception("Id IS Null");
                 return null;
-            var depertment = _unitOfWork.DepartmentRepository.GetDepartmentWithEmployees(id.Value);
-            if (depertment is null)
+            var department = _unitOfWork.DepartmentRepository.GetDepartmentWithEmployees(id.Value);
+            if (department is null)
                 return null;
-            return depertment;
+            DepartmentDto departmentDto = _mapper.Map<DepartmentDto>(department);
+            return departmentDto;
         }
-        public Department GetDepartmentWithEmployeesAsNoTracking(int? id)
+        public DepartmentDto GetDepartmentDtoWithEmployeesAsNoTracking(int? id)
         {
             if (id is null)
                 //throw new Exception("Id IS Null");
                 return null;
-            var depertment = _unitOfWork.DepartmentRepository.GetDepartmentWithEmployeesAsNoTracking(id.Value);
-            if (depertment is null)
+            var department = _unitOfWork.DepartmentRepository.GetDepartmentWithEmployeesAsNoTracking(id.Value);
+            if (department is null)
                 return null;
-            return depertment;
+            DepartmentDto departmentDto = _mapper.Map<DepartmentDto>(department);
+            return departmentDto;
         }
     }
 }

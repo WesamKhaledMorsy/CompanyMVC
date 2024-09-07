@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Company.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\Files\\Images\\12ab9ded-660d-4226-b273-0b67833524b0_images (2).jpeg",
+      "PackagePath": "staticwebassets\\Files\\Images\\12ab9ded-660d-4226-b273-0b67833524b0_images (2).jpeg"
+    },
+    {
+      "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\Files\\Images\\a162e878-c486-4ef3-b889-d76bac26c516_pikachu-drawing-step-11.png",
+      "PackagePath": "staticwebassets\\Files\\Images\\a162e878-c486-4ef3-b889-d76bac26c516_pikachu-drawing-step-11.png"
+    },
+    {
       "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\css\\all.min.css",
       "PackagePath": "staticwebassets\\css\\all.min.css"
     },

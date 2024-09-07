@@ -1,70 +1,70 @@
-﻿@model Employee
+﻿@model EmployeeDto
 @{
     ViewData["Title"] = "Create";
+    var departments = new SelectList(ViewBag.Departments, nameof(DepartmentDto.Id), nameof(DepartmentDto.Name));
 }
-
+ 
 
 <h1>Create New Employee</h1>
 
 <div class="row">
     <div class="col=6">
-        <form asp-action="Create" asp-controller="Employee">
+        <form asp-action="Create"  enctype="multipart/form-data" asp-controller="Employee">
             <div class="col-12">
-                <label for="empName" class="col-form-label">Employee Name :</label>
-                <input asp-for="@Model.Name" type="text"
-                       class="form-control" id="empName" />
-                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                <label asp-for="Name" class="col-form-label">Employee Name :</label>
+                <input asp-for="Name" type="text"
+                       class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="col-12">
-                <label for="empAddress" class="col-form-label">Employee Address :</label>
-                <input type="text" asp-for="@Model.Address" class="form-control" id="empAddress"
+                <label asp-for="Address" class="col-form-label">Employee Address :</label>
+                <input type="text" asp-for="Address" class="form-control"
                        placeholder="Employee Address" />
-                <span asp-validation-for="@Model.Address" class="text-danger "> </span>
+                <span asp-validation-for="Address" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empEmail" class="col-form-label">Employee Email :</label>
-                <input type="email" asp-for="@Model.Email" class="form-control" id="empEmail"
+                <label asp-for="Email" class="col-form-label">Employee Email :</label>
+                <input type="email" asp-for="Email" class="form-control"
                        placeholder="Employee Email" />
-                <span asp-validation-for="@Model.Email" class="text-danger "> </span>
+                <span asp-validation-for="Email" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empHiringDate" class="col-form-label">Employee Hiring Date :</label>
-                <input type="date" asp-for="@Model.HiringDate" class="form-control" id="empHiringDate"
-                       placeholder="HiringDate" />
-                <span asp-validation-for="@Model.HiringDate" class="text-danger "> </span>
+                <label asp-for="HiringDate" class="col-form-label">Employee Hiring Date :</label>
+                <input type="date" asp-for="HiringDate" class="form-control" />
+                <span asp-validation-for="HiringDate" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empAge" class="col-form-label">Employee Age :</label>
-                <input type="number" max="80" min="16" asp-for="@Model.Age" class="form-control" id="empAge"
+                <label asp-for="Age" class="col-form-label">Employee Age :</label>
+                <input type="number" max="80" min="16" asp-for=" Age" class="form-control" id="empAge"
                        placeholder="Age" />
-                <span asp-validation-for="@Model.Age" class="text-danger "> </span>
+                <span asp-validation-for="Age" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empPhoneNumber" class="col-form-label">Employee Phone Number :</label>
-                <input type="text" asp-for="@Model.PhoneNumber" class="form-control" id="empPhoneNumber"
+                <label asp-for="PhoneNumber" class="col-form-label">Employee Phone Number :</label>
+                <input type="text" asp-for="PhoneNumber" class="form-control"
                        placeholder="Phone Number" />
-                <span asp-validation-for="@Model.PhoneNumber" class="text-danger "> </span>
+                <span asp-validation-for=" PhoneNumber" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empSalary" class="col-form-label">Employee Salary :</label>
-                <input type="number" asp-for="@Model.Salary" class="form-control" id="empSalary"
+                <label asp-for="Salary" class="col-form-label">Employee Salary :</label>
+                <input type="number" asp-for=" Salary" class="form-control"
                        placeholder="Salary" />
-                <span asp-validation-for="@Model.Salary" class="text-danger "> </span>
+                <span asp-validation-for=" Salary" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empImage" class="col-form-label">Employee Image :</label>
-                <input type="file" asp-for="@Model.ImageUrl" class="form-control" id="empImage"
+                <label asp-for="Image" class="col-form-label">Employee Image :</label>
+                <input type="file" asp-for="Image" class="form-control"
                        placeholder="Image" />
-                <span asp-validation-for="@Model.ImageUrl" class="text-danger "> </span>
+                <span asp-validation-for="Image" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empDepartmentID" class="col-form-label">Employee Department :</label>
-                <select asp-for="DepartmentId" class="form-control">
+                <label asp-for="DepartmentId" class="col-form-label">Employee Department :</label>
+                <select asp-for="DepartmentId" asp-items="@departments" class="form-control">
                     <option value="">-- Select Department --</option>
-                    @foreach (var dept in ViewBag.Departments as SelectList)
+                   @*  @foreach (var dept in departments)
                     {
                         <option value="@dept.Value">@dept.Text</option>
-                    }
+                    } *@
                 </select>
                 <span asp-validation-for="DepartmentId" class="text-danger"></span>
             </div>

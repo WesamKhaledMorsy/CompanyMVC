@@ -1,25 +1,33 @@
 ﻿using Company.Data.Entities;
 using Company.Repository.Interfaces;
+using Company.Repository.Interfaces.UnitOfWork;
 using Company.Repository.Repositories;
 using Company.Service.Interfaces;
+using Company.Service.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Company.Web.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly IDepartmentService _departmentService;
+        private readonly IDepartmentDtoService _departmentService;
         private readonly ILogger<DepartmentController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DepartmentController(IDepartmentService departmentService, ILogger<DepartmentController> logger) 
+        public DepartmentController(IDepartmentDtoService departmentService, ILogger<DepartmentController> logger , IUnitOfWork unitOfWork)     
         { 
-              _departmentService = departmentService;
+            _departmentService = departmentService;
             _logger=logger;
+            _unitOfWork=unitOfWork;
         }
         [HttpGet]
         public IActionResult Index()
         {
             var departments= _departmentService.GetAll();
+            //ViewBag.Message ="Hello from Department (ViewBag)";
+            //ViewData["Message"]="Hello from Department (ViewData)";
+            //TempData["MessageTemp"] = "Hello from Department (TempData)";
+            TempData.Keep("MessageTemp");
             return View(departments);
         }
         [HttpGet]
@@ -27,9 +35,9 @@ namespace Company.Web.Controllers
         {
             try
             {                
-                var depertment = _departmentService.GetDepartmentWithEmployees(id);
+                var depertment =_departmentService.GetDepartmentDtoWithEmployees(id);
                 if(depertment == null)
-                    return RedirectToAction("NotFoundPage","Home");
+                    return RedirectToAction("NotFoundPage","Home");                
                 return View(viewname,depertment);
             }
             catch (Exception ex)
@@ -47,13 +55,16 @@ namespace Company.Web.Controllers
             return View(new Department());
         }
         [HttpPost]
-        public IActionResult Create(Department  model)
+        public IActionResult Create(DepartmentDto  model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
                     _departmentService.Add(model);
+                    ViewBag.Message ="Hello from Department (ViewBag)";
+                    ViewData["Message"]="Hello from Department (ViewData)";
+                    TempData["MessageTemp"] = "Hello from Department (TempData)";
                     //return RedirectToAction("Index");
                     return RedirectToAction(nameof(Index));
                 }
@@ -82,7 +93,7 @@ namespace Company.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(int id,Department departmentModel)
+        public IActionResult Update(int id, DepartmentDto departmentModel)
         {
             try
             {
@@ -104,7 +115,7 @@ namespace Company.Web.Controllers
         {
             if (id == null)
                 return RedirectToAction("NotFoundPage", "Home");
-            var depertment = _departmentService.GetDepartmentWithEmployees(id);
+            var depertment = _departmentService.GetDepartmentDtoWithEmployees(id);
             if (depertment == null)
                 return RedirectToAction("NotFoundPage", "Home");
 

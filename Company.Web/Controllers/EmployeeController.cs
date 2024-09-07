@@ -3,29 +3,36 @@ using Company.Repository.Interfaces;
 using Company.Repository.Interfaces.UnitOfWork;
 using Company.Service.Interfaces;
 using Company.Service.Services;
+using Company.Service.Services.Employee.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.Json;
 
 namespace Company.Web.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly IEmployeeService _employeeService;
-        private readonly IDepartmentService _departmentService;
+        private readonly IEmployeeDtoService _employeeService;
+        private readonly IDepartmentDtoService _departmentService;
         private readonly ILogger<EmployeeController> _logger;
-
-        public EmployeeController(IEmployeeService employeeService, ILogger<EmployeeController> logger, IDepartmentService departmentService)
+        private readonly IUnitOfWork _unitOfWork;
+        public EmployeeController(IEmployeeDtoService employeeService, ILogger<EmployeeController> logger, IDepartmentDtoService departmentService, IUnitOfWork unitOfWork)
         {
             _employeeService = employeeService;
             _logger=logger;
             _departmentService=departmentService;
+            _unitOfWork=unitOfWork;
         }
-        public IActionResult Index()
+        public IActionResult Index(string? searchInput)
         {
-            var employees = _employeeService.GetAll();
+            IEnumerable<EmployeeDto> employees = new List <EmployeeDto>();
+            if (string.IsNullOrEmpty(searchInput))
+                 employees = _employeeService.GetAll();
+            else
+                employees = _employeeService.GetEmployeeDtoByName(searchInput);
             return View(employees);
-        }
+         }
         //public IActionResult Details(int id)
         //{
         //    var employee = _employeeService.GetByID(id);
@@ -52,13 +59,11 @@ namespace Company.Web.Controllers
         [HttpGet]
         public IActionResult Create(int id)
         {
-            List<Department> departments = _departmentService.GetAll().ToList();
-            ViewBag.Departments = new SelectList(departments, "Id", "Name");
-
-            return View(new Employee());
+            ViewBag.Departments= _departmentService.GetAll();           
+            return View(new EmployeeDto());
         }
         [HttpPost]
-        public IActionResult Create(Employee model)
+        public IActionResult Create(EmployeeDto model)
         {
             try
             {
@@ -83,13 +88,12 @@ namespace Company.Web.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
-            List<Department> departments = _departmentService.GetAll().ToList();
-            ViewBag.Departments = new SelectList(departments, "Id", "Name");
+            ViewBag.Departments = _departmentService.GetAll();
             return Details(id, "Update");
         }
 
         [HttpPost]
-        public IActionResult Update(int id, Employee employeeModel)
+        public IActionResult Update(int id, EmployeeDto employeeModel)
         {
             try
             {

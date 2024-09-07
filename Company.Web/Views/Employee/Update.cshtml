@@ -1,7 +1,8 @@
-﻿@model Employee
+﻿@model EmployeeDto
 
 @{
     ViewData["Title"] = "Update";
+    var departments = new SelectList(ViewBag.Departments, nameof(Department.Id), nameof(Department.Name));
 }
 
 <h1>Edit New Employee</h1>
@@ -58,13 +59,10 @@
                 <span asp-validation-for="@Model.ImageUrl" class="text-danger "> </span>
             </div>
             <div class="col-12">
-                <label for="empDepartmentID" class="col-form-label">Employee Department :</label>
-                <select asp-for="DepartmentId" class="form-control">
+                <label asp-for="DepartmentId" class="col-form-label">Employee Department :</label>
+                <select asp-for="DepartmentId" asp-items="@departments" class="form-control">
                     <option value="">-- Select Department --</option>
-                    @foreach (var dept in ViewBag.Departments as SelectList)
-                    {
-                        <option value="@dept.Value">@dept.Text</option>
-                    }
+                 
                 </select>
                 <span asp-validation-for="DepartmentId" class="text-danger"></span>
             </div>
