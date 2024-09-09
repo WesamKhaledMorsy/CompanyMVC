@@ -20,6 +20,9 @@ D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Azure.Core.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Azure.Identity.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Humanizer.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Build.dll
@@ -43,6 +46,9 @@ D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll

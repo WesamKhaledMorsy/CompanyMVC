@@ -63,6 +63,9 @@ namespace Company.Web.Controllers
             return View(new EmployeeDto());
         }
         [HttpPost]
+        //   This attribute helps defend against cross-site request forgery. It won't prevent
+        //   other forgery or tampering attacks.
+        [ValidateAntiForgeryToken]
         public IActionResult Create(EmployeeDto model)
         {
             try
