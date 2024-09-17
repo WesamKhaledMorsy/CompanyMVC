@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
     },
     {
+      "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\images\\Envelope.gif",
+      "PackagePath": "staticwebassets\\images\\Envelope.gif"
+    },
+    {
       "Id": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\images\\bg_1.jpg",
       "PackagePath": "staticwebassets\\images\\bg_1.jpg"
     },

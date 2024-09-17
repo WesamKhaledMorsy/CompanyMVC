@@ -60,7 +60,7 @@ namespace Company.Web
                 options.LoginPath = "/Account/Login";
                 options.LogoutPath ="/Account/Logout";
                 options.AccessDeniedPath = "/Account/AccessDenied";
-                options.Cookie.Name="Company Cookie";
+                options.Cookie.Name="CompanyCookie";
                 options.Cookie.SecurePolicy =CookieSecurePolicy.Always; // to allow only Https sites
                 options.Cookie.SameSite = SameSiteMode.Strict; // to prevent Cross side Scripting << prevent taking a cookie from anoher site >>
 

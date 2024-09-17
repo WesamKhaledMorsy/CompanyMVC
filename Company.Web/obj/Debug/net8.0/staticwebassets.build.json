@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SO7PAnPeMHirxOJw4vgN2EuHylR29ojXdp0id6kz7m0=",
+  "Hash": "LNuaRBzSNdZ8XRqZ3C6toynKOVrjVK7Q/FsTX3TZeQQ=",
   "Source": "Company.Web",
   "BasePath": "_content/Company.Web",
   "Mode": "Default",
@@ -433,6 +433,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bg_1.jpg"
+    },
+    {
+      "Identity": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\images\\Envelope.gif",
+      "SourceId": "Company.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\",
+      "BasePath": "_content/Company.Web",
+      "RelativePath": "images/Envelope.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Envelope.gif"
     },
     {
       "Identity": "D:\\Route _Diploma\\Back_end\\.NET\\MVC\\Session03\\Demo03\\Company.Web\\wwwroot\\images\\notfound.jpeg",
