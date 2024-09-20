@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Company.Data.Contexts
 {
-    public class CompanyDbContext: IdentityDbContext<ApplicationUser>
+    public class CompanyDbContext: IdentityDbContext<ApplicationUser, ApplicationRole,string>
     {
         public CompanyDbContext(DbContextOptions<CompanyDbContext> options):base(options) 
         {

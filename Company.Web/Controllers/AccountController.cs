@@ -154,5 +154,10 @@ namespace Company.Web.Controllers
         }
         #endregion
 
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
     }
 }

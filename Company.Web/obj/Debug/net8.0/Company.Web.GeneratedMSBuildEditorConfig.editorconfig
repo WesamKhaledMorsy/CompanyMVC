@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Route _Diploma\Back_end\.NET\MVC\Session03\Demo03\Company.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Account/CheckYourInbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja1lvdXJJbmJveC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,6 +98,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/AddOrRemoveUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQWRkT3JSZW1vdmVVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/PartialViews/CreateEditPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcUGFydGlhbFZpZXdzXENyZWF0ZUVkaXRQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/PartialViews/DetailsDeletePartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcUGFydGlhbFZpZXdzXERldGFpbHNEZWxldGVQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Roles/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +140,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/User/PartialViews/CreateEditPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXJ0aWFsVmlld3NcQ3JlYXRlRWRpdFBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/User/PartialViews/DetailsDeletePartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQYXJ0aWFsVmlld3NcRGV0YWlsc0RlbGV0ZVBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/User/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Route _Diploma/Back_end/.NET/MVC/Session03/Demo03/Company.Web/Views/_ViewImports.cshtml]

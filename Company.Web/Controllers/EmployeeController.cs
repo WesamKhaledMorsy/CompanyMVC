@@ -4,6 +4,7 @@ using Company.Repository.Interfaces.UnitOfWork;
 using Company.Service.Interfaces;
 using Company.Service.Services;
 using Company.Service.Services.Employee.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.Json;
 
 namespace Company.Web.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IEmployeeDtoService _employeeService;

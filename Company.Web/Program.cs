@@ -32,7 +32,7 @@ namespace Company.Web
             builder.Services.AddAutoMapper(x=>x.AddProfile(new EmployeeProfile()));
             builder.Services.AddAutoMapper(x=>x.AddProfile(new DepartmentProfile()));
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(config =>
+            builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(config =>
             {
                 config.Password.RequiredUniqueChars = 2;
                 config.Password.RequireDigit = true;
@@ -57,8 +57,8 @@ namespace Company.Web
                 // to prevent delete the cookie configurations from the site if the user is already Active >> SlidingExpiration << (Reset the Expiration Time with every Request)
                 options.SlidingExpiration =true;
                 // Redirect to login Page
-                options.LoginPath = "/Account/Login";
-                options.LogoutPath ="/Account/Logout";
+                options.LoginPath = "/Account/SignIn";
+                options.LogoutPath ="/Account/SignOut";
                 options.AccessDeniedPath = "/Account/AccessDenied";
                 options.Cookie.Name="CompanyCookie";
                 options.Cookie.SecurePolicy =CookieSecurePolicy.Always; // to allow only Https sites
@@ -82,13 +82,14 @@ namespace Company.Web
 
             app.UseRouting();
 
-            app.UseAuthorization();
             //Add Authentiacation
             app.UseAuthentication();
 
+            app.UseAuthorization();
+
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=SignUp}/{id?}");
 
             app.Run();
         }
